@@ -30,11 +30,12 @@ So we limit the count by `CITY_LIMT` env value. It is better to keep it low.
 ```
 docker-compose up -d --build
 ```
-
-+ docker-compose exec core python manage.py createsuperuser
++ Create superuser
 ```
-Follow all instructions of interactive form, just enter username and password, others are optional.
-+ collect static files
+docker-compose exec core python manage.py createsuperuser
+```
+- Follow all instructions of interactive form, just enter username and password, others are optional.
+- collect static files
 ```
 docker-compose exec core python manage.py collectstatic
 ```
